@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>Roche Agentic Clinical Intelligence — Interactive Architecture</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">AI SOLUTION ARCHITECTURE • INTERACTIVE CONCEPT</div>
+        <h1>Roche Agentic Clinical Intelligence</h1>
+        <p class="subtitle">
+          Patient → Diagnostics → Context → Agentic Reasoning → Safety → Human Approval → Outcome
+        </p>
+      </div>
+    </header>
+
+    <section class="toolbar-panel" aria-label="Architecture controls">
+      <div class="toolbar">
+        <button type="button" id="play" class="btn primary">▶ Play flow</button>
+        <button type="button" id="pause" class="btn">⏸ Pause</button>
+        <button type="button" id="stop" class="btn">⏹ Stop</button>
+        <button type="button" id="step" class="btn">→ Step</button>
+        <button type="button" id="reset" class="btn">↺ Reset</button>
+        <a id="archLink" class="btn arch-btn" href="#" target="_blank" rel="noopener noreferrer">↗ Arch</a>
+        <span id="status" class="status" aria-live="polite">Ready — click Play flow or Step</span>
+      </div>
+    </section>
+
+    <section class="canvas-wrap">
+      <svg id="diagram" viewBox="0 0 1100 620" role="img"
+           aria-label="Interactive agentic clinical intelligence architecture">
+        <defs>
+          <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/>
+          </filter>
+        </defs>
+
+        <!-- Architecture zones -->
+        <rect class="zone" x="20" y="30" width="220" height="560"/>
+        <text class="zone-label" x="40" y="54">PATIENT &amp; DATA SOURCES</text>
+
+        <rect class="zone" x="260" y="30" width="250" height="560"/>
+        <text class="zone-label" x="280" y="54">CONTEXT &amp; KNOWLEDGE</text>
+
+        <rect class="zone" x="530" y="30" width="300" height="560"/>
+        <text class="zone-label" x="550" y="54">AGENTIC INTELLIGENCE</text>
+
+        <rect class="zone" x="850" y="30" width="230" height="560"/>
+        <text class="zone-label" x="870" y="54">GOVERNANCE &amp; OUTCOME</text>
+
+        <!-- Flow paths -->
+        <path id="f1" class="flow" d="M145 130 C145 160 145 175 145 205"/>
+        <path id="f2" class="flow" d="M145 250 C180 270 205 270 285 270"/>
+        <path id="f3" class="flow" d="M405 270 C445 270 475 270 555 270"/>
+        <path id="f4" class="flow" d="M670 235 C670 195 670 155 670 120"/>
+        <path id="f5" class="flow" d="M670 305 C670 340 670 365 670 405"/>
+        <path id="f6" class="flow" d="M670 120 C625 145 610 165 610 200"/>
+        <path id="f7" class="flow" d="M670 120 C715 145 730 165 730 200"/>
+        <path id="f8" class="flow" d="M610 255 C610 290 610 320 610 350"/>
+        <path id="f9" class="flow" d="M730 255 C730 290 730 320 730 350"/>
+        <path id="f10" class="flow" d="M610 405 C650 430 690 430 740 430"/>
+        <path id="f11" class="flow" d="M740 430 C785 430 805 430 875 430"/>
+        <path id="f12" class="flow" d="M945 460 C945 490 945 505 945 530"/>
+        <path id="f13" class="flow" d="M875 430 C845 475 825 500 790 530"/>
+        <path id="f14" class="flow" d="M790 530 C745 560 700 565 610 565"/>
+
+        <!-- Nodes -->
+        <g class="node" data-id="patient" data-step="1" transform="translate(75 82)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="140" height="48"/>
+          <text class="node-title" x="12" y="20">Patient</text>
+          <text class="node-sub" x="12" y="36">home / app / PROs</text>
+          <circle class="port" cx="70" cy="48" r="4"/>
+        </g>
+
+        <g class="node" data-id="diagnostics" data-step="2" transform="translate(75 205)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="140" height="48"/>
+          <text class="node-title" x="12" y="20">Diagnostics</text>
+          <text class="node-sub" x="12" y="36">lab / imaging / pathology</text>
+          <circle class="port" cx="140" cy="24" r="4"/>
+        </g>
+
+        <g class="node" data-id="context" data-step="3" transform="translate(285 245)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="120" height="50"/>
+          <text class="node-title" x="12" y="21">Patient Context</text>
+          <text class="node-sub" x="12" y="38">FHIR / EHR / timeline</text>
+          <circle class="port" cx="120" cy="25" r="4"/>
+        </g>
+
+        <g class="node" data-id="orchestrator" data-step="4" transform="translate(555 235)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="230" height="70"/>
+          <text class="node-title" x="15" y="25">Agent Orchestrator</text>
+          <text class="node-sub" x="15" y="43">state • tools • memory • routing</text>
+          <rect class="small-pill" x="15" y="49" width="78" height="15" rx="7"/>
+          <text class="pill-text" x="23" y="60">policy aware</text>
+          <rect class="small-pill" x="101" y="49" width="73" height="15" rx="7"/>
+          <text class="pill-text" x="108" y="60">traceable</text>
+        </g>
+
+        <g class="node" data-id="signal" data-step="5" transform="translate(555 200)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="110" height="55"/>
+          <text class="node-title" x="12" y="22">Signal Agent</text>
+          <text class="node-sub" x="12" y="39">detect change</text>
+        </g>
+
+        <g class="node" data-id="evidence" data-step="5" transform="translate(675 200)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="110" height="55"/>
+          <text class="node-title" x="12" y="22">Evidence Agent</text>
+          <text class="node-sub" x="12" y="39">retrieve proof</text>
+        </g>
+
+        <g class="node" data-id="clinical" data-step="6" transform="translate(555 350)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="230" height="55"/>
+          <text class="node-title" x="15" y="22">Clinical Reasoning Agent</text>
+          <text class="node-sub" x="15" y="40">structured reasoning + uncertainty</text>
+        </g>
+
+        <g class="node" data-id="rag" data-step="5" transform="translate(525 96)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="105" height="48"/>
+          <text class="node-title" x="12" y="20">RAG</text>
+          <text class="node-sub" x="12" y="36">hybrid + rerank</text>
+        </g>
+
+        <g class="node" data-id="graph" data-step="5" transform="translate(710 96)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="105" height="48"/>
+          <text class="node-title" x="12" y="20">Knowledge Graph</text>
+          <text class="node-sub" x="12" y="36">clinical relations</text>
+        </g>
+
+        <g class="node" data-id="safety" data-step="7" transform="translate(875 405)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="140" height="55"/>
+          <text class="node-title" x="12" y="22">Safety Gateway</text>
+          <text class="node-sub" x="12" y="40">policy • consent • guardrails</text>
+        </g>
+
+        <g class="node" data-id="human" data-step="8" transform="translate(875 525)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="140" height="50"/>
+          <text class="node-title" x="12" y="21">Human Approval</text>
+          <text class="node-sub" x="12" y="38">clinician in control</text>
+        </g>
+
+        <g class="node" data-id="action" data-step="9" transform="translate(710 530)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="160" height="50"/>
+          <text class="node-title" x="12" y="21">Care Action</text>
+          <text class="node-sub" x="12" y="38">workflow / follow-up</text>
+        </g>
+
+        <g class="node" data-id="outcome" data-step="10" transform="translate(500 530)" tabindex="0" role="button">
+          <rect filter="url(#softShadow)" width="110" height="50"/>
+          <text class="node-title" x="12" y="21">Outcome</text>
+          <text class="node-sub" x="12" y="38">measure + learn</text>
+        </g>
+
+        <!-- Moving particles -->
+        <circle class="particle" id="p1" r="6" cx="145" cy="130" opacity="0"/>
+        <circle class="particle" id="p2" r="6" cx="145" cy="253" opacity="0"/>
+        <circle class="particle agent" id="p3" r="6" cx="670" cy="305" opacity="0"/>
+        <circle class="particle evidence" id="p4" r="6" cx="730" cy="255" opacity="0"/>
+        <circle class="particle action" id="p5" r="6" cx="945" cy="460" opacity="0"/>
+        <circle class="particle agent" id="p6" r="6" cx="790" cy="530" opacity="0"/>
+
+        <!-- Animated callouts -->
+        <g id="callout1" class="callout-group" opacity="0">
+          <rect class="callout" x="255" y="70" width="240" height="74" filter="url(#softShadow)"/>
+          <text class="callout-title" x="270" y="92">1 · Patient signal</text>
+          <text class="callout-body" x="270" y="111">A longitudinal observation enters</text>
+          <text class="callout-body" x="270" y="126">through governed digital channels.</text>
+        </g>
+
+        <g id="callout2" class="callout-group" opacity="0">
+          <rect class="callout" x="255" y="160" width="240" height="74" filter="url(#softShadow)"/>
+          <text class="callout-title" x="270" y="182">2 · Clinical context</text>
+          <text class="callout-body" x="270" y="201">History, tests and structured data</text>
+          <text class="callout-body" x="270" y="216">become a longitudinal patient state.</text>
+        </g>
+
+        <g id="callout3" class="callout-group" opacity="0">
+          <rect class="callout" x="820" y="70" width="240" height="74" filter="url(#softShadow)"/>
+          <text class="callout-title" x="835" y="92">3 · Evidence-grounded agents</text>
+          <text class="callout-body" x="835" y="111">Agents query RAG and knowledge graphs</text>
+          <text class="callout-body" x="835" y="126">before producing structured reasoning.</text>
+        </g>
+
+        <g id="callout4" class="callout-group" opacity="0">
+          <rect class="callout" x="820" y="175" width="240" height="74" filter="url(#softShadow)"/>
+          <text class="callout-title" x="835" y="197">4 · Govern the action</text>
+          <text class="callout-body" x="835" y="216">Risk, policy, consent and human</text>
+          <text class="callout-body" x="835" y="231">approval determine what may happen.</text>
+        </g>
+      </svg>
+    </section>
+
+    <section class="info-grid">
+      <div class="panel">
+        <h2>Execution timeline</h2>
+        <p id="timelineText">
+          Press <b>Play flow</b> to watch the signal move through the platform.
+          <b>Step</b> advances one architectural stage at a time.
+        </p>
+        <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+        <div class="legend" aria-label="Particle legend">
+          <span><i class="dot patient-dot"></i>patient/data</span>
+          <span><i class="dot agent-dot"></i>agent</span>
+          <span><i class="dot evidence-dot"></i>evidence</span>
+          <span><i class="dot action-dot"></i>approved action</span>
+        </div>
+      </div>
+
+      <div class="panel" id="detail" aria-live="polite">
+        <div class="detail-title">Click a component</div>
+        <p>Select an architecture component to inspect its role, inputs and typical implementation concerns.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Conceptual architecture for presentation/demo use. Not a clinical decision system.
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
