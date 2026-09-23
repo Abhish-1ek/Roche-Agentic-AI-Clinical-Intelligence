@@ -2,7 +2,7 @@
   const CONFIG = {
     // Replace this with your other GitHub Pages URL.
     // Example: https://your-user.github.io/roche-architecture-overview/
-    ARCH_URL: "https://YOUR-USERNAME.github.io/YOUR-ARCH-REPO/"
+    ARCH_URL: "https://abhish-1ek.github.io/Roche-CAREFLOW-Agentic-Architecture-Design/"
   };
 
   const root = document.getElementById("diagram");
