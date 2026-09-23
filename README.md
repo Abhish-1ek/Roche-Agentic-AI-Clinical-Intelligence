@@ -12,37 +12,8 @@ A standalone HTML/CSS/JavaScript prototype for presenting an animated AI-agent s
 - Responsive layout
 - No build step
 - No npm dependencies
-- Works directly on GitHub Pages
 
-## GitHub Pages deployment
-
-1. Create a new GitHub repository.
-2. Upload:
-   - `index.html`
-   - `assets/styles.css`
-   - `assets/app.js`
-3. Open `assets/app.js`.
-4. Change:
-
-```js
-ARCH_URL: "https://YOUR-USERNAME.github.io/YOUR-ARCH-REPO/"
-```
-
-to the GitHub Pages URL you want the **Arch** button to open.
-
-5. In GitHub, go to:
-
-**Settings → Pages → Deploy from a branch → main → / (root)**
-
-6. Save and wait for GitHub Pages to publish the site.
-
-Your URL will generally look like:
-
-```text
-https://YOUR-USERNAME.github.io/YOUR-REPO/
-```
-
-## Suggested repository structure
+## Repository structure
 
 ```text
 roche-agentic-architecture/
